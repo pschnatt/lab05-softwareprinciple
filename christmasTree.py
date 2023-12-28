@@ -3,7 +3,7 @@ from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 
-class Simple_drawing_window(QWidget):
+class Simple_drawing_window2(QWidget):
     def __init__(self):
         QWidget.__init__(self, None)
         self.setWindowTitle("Christmas Tree Drawing")
