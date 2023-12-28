@@ -7,7 +7,6 @@ class Simple_drawing_window3(QWidget):
     def __init__(self):
         QWidget.__init__(self,None)
         self.setWindowTitle("Simple GitHub Drawing")
-        self.rabbit = QPixmap("images/mario.png")
 
     def paintEvent(self, e):
         p = QPainter()
@@ -23,6 +22,5 @@ class Simple_drawing_window3(QWidget):
             QPoint( 30, 210), QPoint( 60, 150),
         ])
 
-        p.drawPixmap(QRect(200, 100, 320, 320), self.rabbit)
         p.end()
 
