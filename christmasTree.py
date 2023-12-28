@@ -18,35 +18,17 @@ class Simple_drawing_window2(QWidget):
 
         p.setPen(QColor(139, 69, 19))  # Brown color for tree trunk
         p.setBrush(QColor(139, 69, 19))
-        p.drawRect(190, 400, 20, 40)  # Tree trunk
+        p.drawRect(490, 400, 20, 40)  # Move the tree trunk even further to the right
 
         p.setPen(QColor(0, 128, 0))  # Green color for tree
         p.setBrush(QColor(0, 128, 0))
 
-
         p.drawPolygon([
-            QPoint(150, 300), QPoint(250, 300), QPoint(200, 200),
+            QPoint(450, 300), QPoint(550, 300), QPoint(500, 200),
         ])
 
-        # p.drawPolygon([
-        #     QPoint(50, 100), QPoint(350, 100), QPoint(200, 0),
-        # ])
-
-        # p.drawPolygon([
-        #     QPoint(100, 200), QPoint(300, 200), QPoint(200, 100),
-        # ])
-
         p.drawPolygon([
-            QPoint(150, 400), QPoint(250, 400), QPoint(200, 300),
+            QPoint(450, 400), QPoint(550, 400), QPoint(500, 300),
         ])
 
         p.end()
-
-def main():
-    app = QApplication(sys.argv)
-    w = Simple_drawing_window()
-    w.show()
-    return app.exec()
-
-if __name__ == "__main__":
-    sys.exit(main())

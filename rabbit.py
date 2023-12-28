@@ -15,11 +15,11 @@ class Simple_drawing_window1(QWidget):
         p.begin(self)
         p.setPen(QColor(0, 0, 0))
         p.setBrush(QColor(255,255,255))  
-        p.drawEllipse(250, 150, 100, 150) 
-        p.drawEllipse(280, 180, 20, 40)  
-        p.drawEllipse(300, 180, 20, 40)  
-        p.drawEllipse(270, 250, 20, 10)  
-        p.drawEllipse(310, 250, 20, 10)  
+        p.drawEllipse(250, 100, 100, 150) 
+        p.drawEllipse(280, 130, 20, 40)  
+        p.drawEllipse(300, 130, 20, 40)  
+        p.drawEllipse(270, 200, 20, 10)  
+        p.drawEllipse(310, 200, 20, 10)  
 
         p.drawPixmap(QRect(200, 100, 320, 320), self.rabbit)  
 
