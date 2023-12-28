@@ -42,9 +42,9 @@ class Disk(object):
         t.begin_fill()
 
         for _ in range(2):
-            t.fd(200)
+            t.fd(self.dwidth)
             t.left(90)
-            t.fd(30)
+            t.fd(self.dheight)
             t.left(90)
         t.fd(100)
 
@@ -57,22 +57,19 @@ class Disk(object):
         self.dxpos, self.dypos = x, y
 
     def cleardisk(self):
-        # Precondition: Turtle must face east
         t.clear()
         t.setheading(0)
 
-        # Move to the current position of the disk
         t.penup()
         t.goto(self.dxpos, self.dypos)
         t.pendown()
 
-        # Clear the disk
         t.fillcolor("grey")
         t.begin_fill()
         for _ in range(2):
-            t.fd(200)
+            t.fd(self.dwidth)
             t.left(90)
-            t.fd(30)
+            t.fd(self.dheight)
             t.left(90)
         t.fd(100)
 
