@@ -20,7 +20,7 @@ class Star(QWidget):
             QPoint(100,  50), QPoint(120, 110),
             QPoint(190, 100), QPoint(140, 150),
             QPoint(170, 210), QPoint(100, 180),
-            QPoint(30, 210), QPoint(60, 150),
+            QPoint( 30, 210), QPoint( 60, 150),
         ])
 
         p.drawPixmap(QRect(200, 100, 320, 320), self.rabbit)
