@@ -26,6 +26,47 @@ class Hanoi(object):
     def solve(self):
         self.move_tower(3, self.startp, self.destinationp, self.workspacep)
 
+class Pole(object):
+  def __init__(self,name="",xpos=0,ypos=0,thick=10,length=100):
+    self.pname = name
+    self.stack = []
+    self.toppos = 0
+    self.pxpos = xpos
+    self.pypos = ypos
+    self.pthick = thick
+    self.plength = length
+
+  def showpole(self):
+    t.penup()
+    t.goto(self.pxpos,self.pypos)
+    t.pendown()
+    t.fd(self.pthick / 2)
+    t.lt(90)
+    t.fd(self.plength)
+    t.lt(90)
+    t.fd(self.pthick)
+    t.lt(90)
+    t.fd(self.plength)
+    t.lt(90)
+    t.fd(self.pthick / 2)
+    
+  def pushdisk(self, disk):
+    if (disk.dheight * self.toppos >= self.plength):
+      return
+    disk.cleardisk()
+    disk.newpos(self.pxpos,self.pypos + disk.dheight * self.toppos)
+    disk.showdisk()
+
+  def popdisk(self):
+    if (self.toppos > 0):
+      disk = self.stack.pop()
+      position = disk.dheight * (len(self.toppos) - 1)
+      self.toppos -= 1
+      disk.cleardisk()
+      disk.newpos(self.pxpos,self.pypos + self.plength + 20)
+      disk.showdisk()
+
+
 class Disk(object):
     def __init__(self, name="", xpos=0, ypos=0, height=20, width=40):
         self.dname = name
